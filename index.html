@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code Menu Ordering</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Welcome to Our Restaurant</h1>
+            <p>Scan the QR code or visit this page to place your order</p>
+        </header>
+
+        <section class="qr-section">
+            <img src="qrcode.png" alt="QR Code" class="qr-code">
+            <p>Please enter your table number to begin:</p>
+            <input type="number" id="tableNumber" placeholder="Table Number">
+        </section>
+
+        <section class="menu-section">
+            <h2>Menu Categories</h2>
+            <div class="category-tabs">
+                <button class="tab-btn" onclick="showMenu('food')">Food</button>
+                <button class="tab-btn" onclick="showMenu('drinks')">Drinks</button>
+                <button class="tab-btn" onclick="showMenu('desserts')">Desserts</button>
+            </div>
+
+            <div id="menuItems" class="menu-items">
+                <!-- Dynamic Menu Items will be loaded here based on the selected category -->
+            </div>
+        </section>
+
+        <section class="order-summary">
+            <h2>Your Order</h2>
+            <div id="orderList"></div>
+            <p>Total: <span id="totalPrice">$0</span></p>
+            <button class="submit-btn" id="payNowBtn">Order & Pay</button>
+        </section>
+
+        <footer>
+            <p>© 2024 Your Restaurant. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
